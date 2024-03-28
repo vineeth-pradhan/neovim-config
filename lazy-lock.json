@@ -4,8 +4,9 @@
   "material.nvim": { "branch": "main", "commit": "ba56aeea3db29c8c9ffd55158aed7b2e6a749a46" },
   "nvim-tree.lua": { "branch": "master", "commit": "e508bdc4184c33c6d9705c503cf7f0e029601788" },
   "nvim-web-devicons": { "branch": "master", "commit": "3ee60deaa539360518eaab93a6c701fe9f4d82ef" },
+  "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
+  "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
   "vim-airline": { "branch": "master", "commit": "d9f42cb46710e31962a9609939ddfeb0685dd779" },
   "vim-airline-themes": { "branch": "master", "commit": "a9aa25ce323b2dd04a52706f4d1b044f4feb7617" },
-  "vim-devicons": { "branch": "master", "commit": "71f239af28b7214eebb60d4ea5bd040291fb7e33" },
   "vim-fugitive": { "branch": "master", "commit": "2377e16e6641418565b934990cf49068855987c6" }
 }
