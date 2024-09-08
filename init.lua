@@ -66,3 +66,5 @@ vim.api.nvim_set_keymap('', '<Leader><Leader>F', "<cmd>lua require'hop'.hint_cha
 vim.api.nvim_set_keymap('', '<Leader><Leader>t', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", {})
 vim.api.nvim_set_keymap('', '<Leader><Leader>T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", {})
 
+-- TS server
+config = require'lspconfig'.tsserver.setup{}
