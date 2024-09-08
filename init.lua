@@ -22,11 +22,14 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
+vim.opt.si = true -- Smart indent
 vim.opt.number = true
 vim.opt.wrap = false -- disable line wrapping
 -- search settings
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+vim.opt.path:append { '**' } -- Finding files - search down into the subfolders
+vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- cursor line
 vim.opt.cursorline = true -- highlight the current cursor line
