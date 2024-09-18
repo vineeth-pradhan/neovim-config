@@ -13,9 +13,11 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("plugins", opts)
-vim.g.mapleader = "\\" -- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.opt.backup = false
 vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
+vim.g.mapleader = "\\" -- Make sure to set `mapleader` before lazy so your mappings are correct
+require("lazy").setup("plugins", opts)
+require("maps")
 
 -- tabs & indentation
 vim.opt.tabstop = 2
@@ -24,7 +26,10 @@ vim.opt.expandtab = true -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
 vim.opt.si = true -- Smart indent
 vim.opt.number = true
-vim.opt.wrap = false -- disable line wrapping
+-- vim.opt.wrap = false -- disable line wrapping
+vim.opt.smarttab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 -- search settings
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
@@ -67,4 +72,5 @@ vim.api.nvim_set_keymap('', '<Leader><Leader>t', "<cmd>lua require'hop'.hint_cha
 vim.api.nvim_set_keymap('', '<Leader><Leader>T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", {})
 
 -- TS server
-config = require'lspconfig'.tsserver.setup{}
+-- config = require'lspconfig'.tsserver.setup{}
+vim.cmd[[colorscheme tokyonight]]

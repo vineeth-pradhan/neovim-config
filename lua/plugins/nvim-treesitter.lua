@@ -1,9 +1,13 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  build = ":TSUpdate",
   config = function()
-    local status, ts = pcall(require, 'nvim-treesitter.configs')
-    if(not status) then return end
-    ts.setup {
+    local configs = require("nvim-treesitter.configs")
+    configs.setup({
+      ensure_installed = {
+        'tsx', 'javascript', 'lua', 'css', 'json', 'ruby', 'java', 'html', 'vim', 'query', 'typescript'
+      },
+      sync_install = true,
       highlight = {
         enable = true,
         disable = {}
@@ -12,12 +16,9 @@ return {
         enable = true,
         disable = {}
       },
-      ensure_installed = {
-        'tsx', 'javascript', 'lua', 'css', 'json', 'ruby', 'java'
-      },
       autotag = {
         enable = true
       }
-    }
+    })
   end
 }
