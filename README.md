@@ -1,2 +1,6 @@
 # Dependencies
-`brew install ripgrep` # This is for live-grep feature in telescope
+
+#### This is for live-grep feature in telescope
+
+1. `brew install ripgrep`
+1. `brew install fd`
