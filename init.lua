@@ -73,4 +73,4 @@ vim.api.nvim_set_keymap('', '<Leader><Leader>T', "<cmd>lua require'hop'.hint_cha
 
 -- TS server
 -- config = require'lspconfig'.tsserver.setup{}
-vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd[[colorscheme solarized]]
