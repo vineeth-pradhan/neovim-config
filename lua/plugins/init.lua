@@ -5,9 +5,19 @@ return {
   "hrsh7th/cmp-path",
   "hrsh7th/cmp-cmdline",
   "hrsh7th/nvim-cmp",
-  "neovim/nvim-lspconfig",
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("plugins.config.lspconfig")
+    end
+  },
   "nvim-tree/nvim-web-devicons",
-  "nvim-treesitter/nvim-treesitter",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("plugins.config.treesitter")
+    end
+  },
   "rafamadriz/friendly-snippets",
   "tjdevries/colorbuddy.nvim",
   "tpope/vim-fugitive", -- Git commands
