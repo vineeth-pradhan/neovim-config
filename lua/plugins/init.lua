@@ -11,6 +11,10 @@ return {
       require("plugins.config.lspconfig")
     end
   },
+  {
+    "lukoshkin/highlight-whitespace",
+    config = true
+  },
   "nvim-tree/nvim-web-devicons",
   {
     "nvim-treesitter/nvim-treesitter",
