@@ -13,7 +13,9 @@ return {
   },
   {
     "lukoshkin/highlight-whitespace",
-    config = true
+    config = function()
+      require("plugins.config.highlight-whitespace")
+    end
   },
   "nvim-tree/nvim-web-devicons",
   {
